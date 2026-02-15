@@ -1,38 +1,156 @@
-.App {
+.app {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__header {
+  background-color: #d6e2ff;
+  border-bottom: 1px solid #b7c6ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+}
+
+.app__title {
+  margin: 0;
+  color: #1d1d1f;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.app__content {
+  flex: 1;
+  padding: 24px 12px 32px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.users-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.users-page__status {
+  margin: 0;
+  color: #1d1d1f;
+  font-size: 16px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.users-page__status--error {
+  color: #b00020;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.users-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-card {
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  padding: 14px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 6px;
+  transition: background-color 0.15s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.user-card:hover {
+  background-color: #f7f7f7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-card__name {
+  margin: 0;
+  font-size: 18px;
+  color: #1d1d1f;
+}
+
+.user-card__field {
+  margin: 0;
+  font-size: 14px;
+  color: #333333;
+}
+
+.user-card__label {
+  font-weight: 600;
+}
+
+.user-card__more {
+  margin-top: 10px;
+  align-self: flex-start;
+  padding: 6px 10px;
+  border: 1px solid #1d1d1f;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #1d1d1f;
+  transition: background-color 0.15s ease;
+}
+
+.user-card__more:hover {
+  background-color: #e6e6e6;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.user-details__status {
+  margin: 0;
+  font-size: 16px;
+  color: #1d1d1f;
+  text-align: center;
+}
+
+.user-details__status--error {
+  color: #b00020;
+}
+
+.user-details__back {
+  align-self: flex-start;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #1d1d1f;
+}
+
+.user-details__back:hover {
+  background-color: transparent;
+}
+
+.user-details__card {
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.user-details__title {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #1d1d1f;
+}
+
+.user-details__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.user-details__item {
+  font-size: 14px;
+  color: #333333;
+}
+
+.user-details__label {
+  font-weight: 600;
 }
